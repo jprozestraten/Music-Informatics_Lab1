@@ -1,0 +1,12 @@
+*.asv
+
+kikibouba_test/
+kikibouba_train/
+
+road.wav
+cat.wav
+
+boubatest.mat
+boubatrain.mat
+kikitest.mat
+kikitrain.mat
