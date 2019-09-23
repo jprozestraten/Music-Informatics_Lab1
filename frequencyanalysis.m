@@ -38,8 +38,8 @@ sgtitle([num2str(dt*1e3),' ms segments'])
 
 %% Plot segments at 4 s and at 15 s in frequency-domain
 L = N;
-[P_t1,f_t1] = fft2psd(fft(x(range_t1)));
-[P_t2,f_t2] = fft2psd(fft(x(range_t2)));
+[P_t1,f_t1] = fft2ss(fft(x(range_t1)));
+[P_t2,f_t2] = fft2ss(fft(x(range_t2)));
 
 figure(3)
 subplot(211)
@@ -56,8 +56,8 @@ ylabel('P_X [dB]')
 xlim([0 5])
 sgtitle(['PSD of ',num2str(dt*1e3),' ms segments with box-car window'])
 
-[P_t1_hann,f_t1_hann] = fft2psd(fft(x(range_t1).*hann(L,'periodic')));
-[P_t2_hann,f_t2_hann] = fft2psd(fft(x(range_t2).*hann(L,'periodic')));
+[P_t1_hann,f_t1_hann] = fft2ss(fft(x(range_t1).*hann(L,'periodic')));
+[P_t2_hann,f_t2_hann] = fft2ss(fft(x(range_t2).*hann(L,'periodic')));
 
 figure(4)
 subplot(211)
