@@ -54,7 +54,7 @@ title(['t_2 = ',num2str(t2),' s'])
 xlabel('Frequency [kHz]')
 ylabel('P_X [dB]')
 xlim([0 5])
-sgtitle(['PSD of ',num2str(dt*1e3),' ms segments with box-car window'])
+sgtitle(['Single-sided magnitude spectrum of ',num2str(dt*1e3),' ms segments with box-car window'])
 
 [P_t1_hann,f_t1_hann] = fft2ss(fft(x(range_t1).*hann(L,'periodic')));
 [P_t2_hann,f_t2_hann] = fft2ss(fft(x(range_t2).*hann(L,'periodic')));
@@ -72,7 +72,7 @@ title(['t_2 = ',num2str(t2),' s'])
 xlabel('Frequency [kHz]')
 ylabel('P_X [dB]')
 xlim([0 5])
-sgtitle(['PSD of ',num2str(dt*1e3),' ms segments with hann window'])
+sgtitle(['Single-sided magnitude spectrum of ',num2str(dt*1e3),' ms segments with hann window'])
 
 %% Windowing of complete signal with overlap
 tSegment = 0.1;
